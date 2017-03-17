@@ -1,4 +1,3 @@
-let h = require('helpers');
 let f = require('helpers').getFunctions();
 let Paginator = require('paginator');
 
@@ -43,21 +42,18 @@ class Pagination {
     /**
      * Slice items for current page.
      *
-     * @return {{}}
+     * @return {Object}
      */
     sliceItems()
     {
-        let result = {};
-
-        if (this.getPaginator()) {
-            result = this.getItems().slice(this.firstResult(), this.lastResult());
+        if (this.getPaginator()) 
+        {
+            return this.getItems().slice(this.firstResult(), this.lastResult());
         } else {
             console.log('Something wrong on initialize pagination.');
-
-            result = {};
         }
 
-        return result;
+        return {};
     }
 
     /**
