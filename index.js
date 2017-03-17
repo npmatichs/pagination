@@ -1,5 +1,5 @@
 let h = require('helpers');
-let f = require('../administrator/helpers/functions');
+let f = require('helpers').getFunctions();
 let Paginator = require('paginator');
 
 class Pagination {
@@ -67,7 +67,7 @@ class Pagination {
      */
     render()
     {
-            return f.view('../eloquentable/paginator.pug', {paginator: this});
+        return f.view('../eloquentable/paginator.pug', {paginator: this});
     }
 
     /**
@@ -77,7 +77,7 @@ class Pagination {
      */
     getPaginator()
     {
-            return this.paginator;
+        return this.paginator;
     }
 
     /**
@@ -87,7 +87,7 @@ class Pagination {
      */
     getCurrentPage()
     {
-            return this.currentPage;
+        return this.currentPage;
     }
 
     /**
@@ -97,7 +97,7 @@ class Pagination {
      */
     getNumberOfPages()
     {
-            return this.numberOfPages;
+        return this.numberOfPages;
     }
 
     /**
@@ -107,7 +107,7 @@ class Pagination {
      */
     getItems()
     {
-            return this.items;
+        return this.items;
     }
 
     /**
@@ -117,7 +117,7 @@ class Pagination {
      */
     getPerPage()
     {
-            return this.perPage;
+        return this.perPage;
     }
 
     /**
@@ -127,7 +127,7 @@ class Pagination {
      */
     getLastPage()
     {
-            return this.getPaginator().last_page;
+        return this.getPaginator().last_page;
     }
 
     /**
@@ -137,7 +137,7 @@ class Pagination {
      */
     getResult()
     {
-            return this.result;
+        return this.result;
     }
 
     /**
@@ -147,7 +147,7 @@ class Pagination {
      */
     firstResult()
     {
-            return this.getPaginator().first_result;
+        return this.getPaginator().first_result;
     }
 
     /**
@@ -157,7 +157,7 @@ class Pagination {
      */
     lastResult()
     {
-            return this.getPaginator().last_result;
+        return this.getPaginator().last_result;
     }
 
     /**
@@ -167,7 +167,7 @@ class Pagination {
      */
     getNextPage()
     {
-            return this.getPaginator().next_page;
+        return this.getPaginator().next_page;
     }
 
     /**
@@ -177,7 +177,7 @@ class Pagination {
      */
     getPreviousPage()
     {
-            return this.getPaginator().previous_page;
+        return this.getPaginator().previous_page;
     }
 
     /**
@@ -187,7 +187,7 @@ class Pagination {
      */
     hasPreviousPage()
     {
-            return this.getPaginator().has_previous_page;
+        return this.getPaginator().has_previous_page;
     }
 
     /**
@@ -197,7 +197,7 @@ class Pagination {
      */
     hasNextPage()
     {
-            return this.getPaginator().has_next_page;
+        return this.getPaginator().has_next_page;
     }
 
     /**
@@ -207,7 +207,7 @@ class Pagination {
      */
     getTotalResults()
     {
-            return this.getPaginator().total_results;
+        return this.getPaginator().total_results;
     }
 
     /**
@@ -217,7 +217,7 @@ class Pagination {
      */
     getResults()
     {
-            return this.getPaginator().results;
+        return this.getPaginator().results;
     }
 
     /**
@@ -239,7 +239,7 @@ class Pagination {
      */
     getPages()
     {
-            return this.getPaginator().pages;
+        return this.getPaginator().pages;
     }
 
     /**
@@ -249,7 +249,7 @@ class Pagination {
      */
     totalPages()
     {
-            return this.getPaginator().total_pages;
+        return this.getPaginator().total_pages;
     }
 
     /**
@@ -259,7 +259,7 @@ class Pagination {
      */
     showPagination()
     {
-            return this.getTotalResults() > this.getPerPage();
+        return this.getTotalResults() > this.getPerPage();
     }
 }
 

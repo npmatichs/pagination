@@ -1,4 +1,4 @@
-# Pagination based 
+# Pagination based [npm/paginator](https://github.com/wickd/paginator) module.
 
 # API docs will be soon ..
 
